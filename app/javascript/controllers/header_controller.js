@@ -2,10 +2,17 @@ import { Controller } from "@hotwired/stimulus";
 import { toggle } from "el-transition";
 
 export default class extends Controller {
-  static targets = ["openUserMenu"];
+  static targets = ["openUserMenu", "userAuthLink"];
   connect() {
     this.openUserMenuTarget.addEventListener("click", this.toggleDropdownMenu);
-    
+ 
+    this.userAuthLinkTargets.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        // console.log('user links clicked')
+        document.getElementById("modal-trigger").click()
+      })
+    })  
   }
 
   toggleDropdownMenu() {
