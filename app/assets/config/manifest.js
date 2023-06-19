@@ -6,3 +6,5 @@
 //= link controllers/index.js
 //= link_tree ../builds
 //= link tailwind.css
+//= link controllers/modal_controller.js
+
