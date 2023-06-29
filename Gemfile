@@ -6,6 +6,9 @@ ruby '3.1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+
+gem 'devise', '~> 4.9'
+
 gem 'jbuilder'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
@@ -16,6 +19,10 @@ gem 'rails', '~> 7.0.5'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
+
+# gem 'rubocop', require: false
+
+gem 'sassc-rails'
 gem 'sprockets-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -28,16 +35,11 @@ gem 'turbo-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'devise', '~> 4.9'
-
-gem 'sassc-rails'
-
-gem 'rubocop', require: false
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
+  gem 'pry'
   gem 'rspec-rails', '~>5.1', '>=5.1.2'
 end
 
@@ -59,8 +61,9 @@ end
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+# gem 'factory_bot', '~> 6.2'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'factory_bot', '~> 6.2'
+
