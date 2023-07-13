@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root "home#index"
   
   namespace :api do
-    resources :users, only: :show
-    get "/users_by_email" => "users_by_emails#show", as: :users_by_email, format: :json
+        get "/users_by_email" => "users_by_emails#show", as: :users_by_email, format: :json
   end
 end
