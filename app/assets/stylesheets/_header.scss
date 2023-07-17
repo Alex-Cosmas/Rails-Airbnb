@@ -1,6 +1,5 @@
 nav-header {
   min-height: 80px;
-  align-items: center;
 }
 
 .logo-link {
@@ -17,7 +16,10 @@ nav-header {
     color: rgb(244, 63, 94) !important;
   }
 
-  // input[type="email"], input[type="text"] {
-
-  // }
+  input[type="email"], input[type="text"] {
+    &:focus {
+      border-color: rgb(244, 63, 94) !important;
+    }
+    color: rgb(244, 63, 94) !important;
+  }
 }
