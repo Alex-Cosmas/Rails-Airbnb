@@ -8,3 +8,7 @@
 //= link tailwind.css
 //= link controllers/modal_controller.js
 //= link controllers/users_by_email_auth_controller.js
+
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js
+
